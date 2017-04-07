@@ -17,7 +17,7 @@ fclose($last_edit_file);
 
 $db_con = mysqli_connect($config['db_host'],$config['db_username'],$config['db_password'],$config['db_name']) or die("Some error occurred during connection " . mysqli_error($con));
 
-$query = 'SELECT username,concat("https://twitter.com/",username)  FROM '.$config['db_table'];
+$query = 'SELECT username,concat("https://twitter.com/",username) as URL FROM '.$config['db_table'];
 if($last_edited_time != '')
 	$query .= ' WHERE added_date >= "'.$last_edited_time.'"';
 $query .= ' ORDER BY added_date desc';

@@ -6,7 +6,7 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
 
 $base_path 				=	dirname(__FILE__);
 $csv_filename 			=	$base_path."/ExportTweet-".date('Y-m-d-H-i-s').".csv";
-$last_edit_file_name 	= 	$base_path."/last_edited.txt";
+$last_edit_file_name 	= 	$base_path."/last_edited_screenname.txt";
 
 $last_edit_file 		= 	fopen($last_edit_file_name, "r");
 $last_edited_time 		= 	'';
